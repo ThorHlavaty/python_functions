@@ -1,5 +1,8 @@
+#Here's our list the user will give us.
 strings = []
+#This is the escape from the loop when the user is done
 esc = "y"
+#This functions takes a bunch of strings, checks the shortest, and tells you what it is and how long the shortest is.
 def smallest_strings(strings):
     valid = 'y'
     while valid == 'y':
@@ -18,6 +21,7 @@ def smallest_strings(strings):
         shortstring = ""
         length = 0
         valid = input("Want to do another? [y/n]: ")
+#This function is the same-ish as above, but for the longest string. It's a little weirder.
 def largest_strings(strings):
     valid = 'y'
     while valid == 'y':
@@ -37,8 +41,9 @@ def largest_strings(strings):
         longstring = ""
         length = 0
         valid = input("Want to do another? [y/n]: ") 
+#Starts the program.
 print("Hello there!")
-
+#Runs the user through what they want to do/
 while esc == "y":
     choice = input('Do you want to know your "shortest" string or your "longest" string?: ').lower()
     if choice == "shortest":
@@ -65,4 +70,5 @@ while esc == "y":
                 print("Sorry, I didn't catch that.")
     else:
         print("Sorry, I didn't catch that!")
+#This says goodbye. Very easy to implement: slap it to the end of any code at the highest level of indentation.
 print("Okay, goodbye!\n\n\n\n\n\n\n❤️❤️❤️ i love u ❤️❤️❤️")
